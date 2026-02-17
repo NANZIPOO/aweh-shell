@@ -1,0 +1,19 @@
+name: aweh_shell
+version: 0.1.0
+publish_to: 'none'
+description: Modular UI framework for consistent application layout with tab management, toolbars, headers, sidebars, and workspace components.
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
