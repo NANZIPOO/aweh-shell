@@ -28,7 +28,7 @@ class Level1_DirectUsage extends StatelessWidget {
             ],
           ),
         ),
-        
+
         // Toolbar
         AwehToolbar(
           items: [
@@ -41,7 +41,7 @@ class Level1_DirectUsage extends StatelessWidget {
             ),
           ],
         ),
-        
+
         // Custom layout - two columns
         Expanded(
           child: Row(
@@ -54,7 +54,7 @@ class Level1_DirectUsage extends StatelessWidget {
                   child: const Center(child: Text('Main Content')),
                 ),
               ),
-              
+
               // Right panel
               Expanded(
                 flex: 1,
@@ -66,7 +66,7 @@ class Level1_DirectUsage extends StatelessWidget {
             ],
           ),
         ),
-        
+
         // Bottom toolbar
         AwehBottomToolbar(
           items: const [
@@ -92,15 +92,13 @@ class Level2_ModuleConfig extends StatelessWidget {
     final config = ModuleConfig(
       moduleId: 'users',
       moduleName: 'User Management',
-      
+
       // Content builder - required
       contentBuilder: (context) => Container(
         color: Colors.grey.shade100,
-        child: const Center(
-          child: Text('User Grid Goes Here'),
-        ),
+        child: const Center(child: Text('User Grid Goes Here')),
       ),
-      
+
       // Toolbar items - optional
       toolbarItems: [
         ToolbarItem(
@@ -125,7 +123,7 @@ class Level2_ModuleConfig extends StatelessWidget {
           sortOrder: 2,
         ),
       ],
-      
+
       // Header builder - optional
       headerBuilder: (context) => Container(
         padding: const EdgeInsets.all(12),
@@ -148,19 +146,17 @@ class Level2_ModuleConfig extends StatelessWidget {
           ],
         ),
       ),
-      
+
       // Sidebar builder - optional
       sidebarBuilder: (context) => Container(
         width: 200,
         color: Colors.grey.shade200,
         child: const Center(child: Text('Filters')),
       ),
-      
+
       // Bottom builder - optional
       bottomBuilder: (context) => AwehBottomToolbar(
-        items: const [
-          BottomToolbarItem(label: 'Total', value: '42'),
-        ],
+        items: const [BottomToolbarItem(label: 'Total', value: '42')],
       ),
     );
 
@@ -206,9 +202,7 @@ class Level3_ConvenienceWrapper extends StatelessWidget {
       ],
       content: Container(
         color: Colors.grey.shade100,
-        child: const Center(
-          child: Text('Employee Grid'),
-        ),
+        child: const Center(child: Text('Employee Grid')),
       ),
       bottomToolbarItems: const [
         BottomToolbarItem(label: 'Total Employees', value: '156'),
@@ -231,7 +225,7 @@ class PurchaseOrderDetailsModule extends StatelessWidget {
     final config = ModuleConfig(
       moduleId: 'po-details',
       moduleName: 'Purchase Order',
-      
+
       // Header with supplier info, dates, status
       headerBuilder: (context) => Container(
         padding: const EdgeInsets.all(12),
@@ -259,7 +253,7 @@ class PurchaseOrderDetailsModule extends StatelessWidget {
           ],
         ),
       ),
-      
+
       // Toolbar with Save and PDF buttons
       toolbarItems: [
         ToolbarItem(
@@ -277,13 +271,13 @@ class PurchaseOrderDetailsModule extends StatelessWidget {
           sortOrder: 1,
         ),
       ],
-      
+
       // Main content - order line items grid
       contentBuilder: (context) => Container(
         color: Colors.white,
         child: const Center(child: Text('Order Line Items Grid')),
       ),
-      
+
       // Bottom bar with totals
       bottomBuilder: (context) => AwehBottomToolbar(
         items: const [

@@ -96,9 +96,7 @@ class _AwehInternalSidebarState extends State<AwehInternalSidebar> {
         if (widget.config.collapsible)
           Container(
             decoration: BoxDecoration(
-              border: Border(
-                left: BorderSide(color: Colors.grey.shade300),
-              ),
+              border: Border(left: BorderSide(color: Colors.grey.shade300)),
             ),
             child: IconButton(
               icon: Icon(

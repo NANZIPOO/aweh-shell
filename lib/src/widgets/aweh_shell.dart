@@ -21,13 +21,7 @@ class AwehShell extends StatefulWidget {
     this.onTabTap,
     this.onTabClose,
     this.statusIndicator,
-    this.menuItems = const [
-      'File',
-      'Edit',
-      'Reports',
-      'Settings',
-      'Help',
-    ],
+    this.menuItems = const ['File', 'Edit', 'Reports', 'Settings', 'Help'],
   });
 
   @override

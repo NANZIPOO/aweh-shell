@@ -65,15 +65,10 @@ class AwehToolbar extends StatelessWidget {
 
     return OutlinedButton.icon(
       onPressed: item.isEnabled ? item.onPressed : null,
-      icon: Icon(
-        item.icon,
-        color: item.id == 'delete' ? Colors.red : null,
-      ),
+      icon: Icon(item.icon, color: item.id == 'delete' ? Colors.red : null),
       label: Text(
         item.label,
-        style: TextStyle(
-          color: item.id == 'delete' ? Colors.red : null,
-        ),
+        style: TextStyle(color: item.id == 'delete' ? Colors.red : null),
       ),
     );
   }

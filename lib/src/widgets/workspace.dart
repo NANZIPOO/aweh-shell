@@ -53,9 +53,7 @@ class Workspace extends StatelessWidget {
         if (config.headerBuilder != null) config.headerBuilder!(context),
 
         // Main content area (with optional sidebar)
-        Expanded(
-          child: _buildContentArea(context),
-        ),
+        Expanded(child: _buildContentArea(context)),
 
         // Optional: Bottom toolbar
         if (config.bottomBuilder != null) config.bottomBuilder!(context),
@@ -70,11 +68,9 @@ class Workspace extends StatelessWidget {
         children: [
           // Sidebar
           config.sidebarBuilder!(context),
-          
+
           // Main content
-          Expanded(
-            child: config.contentBuilder(context),
-          ),
+          Expanded(child: config.contentBuilder(context)),
         ],
       );
     }

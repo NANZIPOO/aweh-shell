@@ -55,11 +55,11 @@ class ModuleWorkspace extends StatelessWidget {
     final config = ModuleConfig(
       moduleId: 'module',
       moduleName: moduleTitle ?? 'Module',
-      
+
       // Content builder
       contentBuilder: (context) {
         Widget mainContent = content;
-        
+
         // Wrap with internal sidebar if provided
         if (internalSidebar != null) {
           mainContent = AwehInternalSidebar(
@@ -67,13 +67,13 @@ class ModuleWorkspace extends StatelessWidget {
             mainContent: mainContent,
           );
         }
-        
+
         return mainContent;
       },
-      
+
       // Toolbar items
       toolbarItems: toolbarItems,
-      
+
       // Header builder
       headerBuilder: (headerWidgets != null && headerWidgets!.isNotEmpty)
           ? (context) {
@@ -105,14 +105,14 @@ class ModuleWorkspace extends StatelessWidget {
                         ],
                       ),
                     ),
-                  
+
                   // Custom header widgets
                   AwehHeaderSection(children: headerWidgets!),
                 ],
               );
             }
           : (moduleTitle != null
-              ? (context) => Container(
+                ? (context) => Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border(
@@ -135,11 +135,11 @@ class ModuleWorkspace extends StatelessWidget {
                       ],
                     ),
                   )
-              : null),
-      
+                : null),
+
       // Bottom toolbar builder
-      bottomBuilder: (bottomToolbarItems != null &&
-              bottomToolbarItems!.isNotEmpty)
+      bottomBuilder:
+          (bottomToolbarItems != null && bottomToolbarItems!.isNotEmpty)
           ? (context) => AwehBottomToolbar(items: bottomToolbarItems!)
           : null,
     );

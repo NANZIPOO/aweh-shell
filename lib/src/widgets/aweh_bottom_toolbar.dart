@@ -43,19 +43,15 @@ class AwehBottomToolbar extends StatelessWidget {
       children: [
         Text(
           '${item.label}: ',
-          style: item.textStyle ??
-              const TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 12,
-              ),
+          style:
+              item.textStyle ??
+              const TextStyle(fontWeight: FontWeight.w500, fontSize: 12),
         ),
         Text(
           item.value,
-          style: item.textStyle ??
-              const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 12,
-              ),
+          style:
+              item.textStyle ??
+              const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
         ),
       ],
     );
