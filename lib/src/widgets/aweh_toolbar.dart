@@ -26,9 +26,16 @@ class AwehToolbar extends StatelessWidget {
       return aOrder.compareTo(bOrder);
     });
 
-    return Padding(
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(
+          bottom: BorderSide(color: Colors.grey.shade300),
+        ),
+      ),
       padding: padding,
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           for (int i = 0; i < sortedItems.length; i++) ...[
             _buildToolbarButton(context, sortedItems[i]),
